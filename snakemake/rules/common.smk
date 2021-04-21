@@ -1,0 +1,23 @@
+# folder organization of the pipeline input and output files
+RULES_DIR = "snakemake/rules/"
+LOG_DIR = "logs/"
+
+INPUT_DIR = "input/"
+INPUT_ENHANCER_DIR = INPUT_DIR + "enhancer/"
+INPUT_RNASEQ_DIR = INPUT_DIR + "rnaseq/"
+
+OUTPUT_DIR = "output/"
+
+OUTPUT_ENHANCER_DIR = OUTPUT_DIR + "enhancer/"
+OUTPUT_CONVERTED = OUTPUT_ENHANCER_DIR + "01_converted/"
+OUTPUT_MERGED = OUTPUT_ENHANCER_DIR + "02_merged/"
+OUTPUT_FILTERED = OUTPUT_ENHANCER_DIR + "03_filtered/"
+OUTPUT_EXTENDED = OUTPUT_ENHANCER_DIR + "04_extended/"
+OUTPUT_GROUPED = OUTPUT_ENHANCER_DIR + "05_grouped/"
+OUTPUT_COMBINED = OUTPUT_ENHANCER_DIR + "06_combined/"
+OUTPUT_ANNOTATED = OUTPUT_ENHANCER_DIR + "07_annotated/"
+OUTPUT_CORRELATED = OUTPUT_ENHANCER_DIR + "08_correlated/"
+
+OUTPUT_BAMDIR = OUTPUT_DIR + "strand_split_bam/"
+OUTPUT_COUNTDIR = OUTPUT_DIR + "counts/"
+OUTPUT_CORRELATION_DIR = OUTPUT_DIR + "correlation/"

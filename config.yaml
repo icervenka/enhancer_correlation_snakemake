@@ -1,0 +1,34 @@
+### For explanation of individual parameters, see readme.md file ###
+
+### General --------------------------------------------------------------------
+experiment_name: "enhancer_test"
+threads: 15
+species: "mouse"
+enhancer_metadata: "enhancer_metadata.tsv"
+rnaseq_metadata: "rnaseq_metadata.tsv"
+
+### RNASeq related -------------------------------------------------------------
+bam_chrom_style: "ensembl"
+gtf: "/shared/genome/grcm38/annotation/grcm38.gtf"
+is_rnaseq_stranded: "yes"
+
+### BED file related -----------------------------------------------------------
+chrom_sizes: "input/chrom_sizes.genome"
+chrom_conversion_table: ""
+preserve_strand: "no"
+
+### Enhancer identification related --------------------------------------------
+combine: "merge"
+directionality_cutoff: 90
+max_annotation_distance: 1000000
+gene_read_cutoff: 10
+enhancer_read_cutoff: 10
+normalize_counts: "none"
+
+### Differential expression and correlation ------------------------------------
+# TODO: documentation
+contrast: "group"
+reference_levels: ["ctrl","sus3d","sus7d","rel1d","rel3d"]
+lfc_shrink: "ashr"
+fdr: 0.1
+enhancer_gene_correlation_cutoff: "0.5"
