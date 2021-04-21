@@ -8,7 +8,11 @@ expression.
 
 ## Input folders
 
-### enhancer
+Folders to put the data to be analysed. Folder structure can be changed in:
+
+`snakemake/rules/common.smk`
+
+### input/enhancer
 
 BED files with genomic regions to include as potential enhancers. Pipeline will
 combine data from several types of experiments such as ATACSeq, GROSeq, CHIPSeq
@@ -32,9 +36,9 @@ has no effect on the outcome, implemented for future extensions.
   - exclude - BED files which contain regions to be excluded, such as gene coding
   sequences
 
-### rnaseq
+### input/rnaseq
 
-BAM files containing both gene and enhancer expression data in format \<sample\>/\<file\>
+BAM files containing both gene and enhancer expression data in format `<sample>/<file>`
 that are reflected in the **rnaseq_metadata** file. This structure can be obtained
 by using our snakemake bulk rnaseq pipeline in the 'align only' mode.
 
@@ -47,7 +51,7 @@ Following information needs to be provided:
 ---
 ## Output folders
 
-### enhancers
+### output/enhancer
 Contains all intermediate processing steps of supplied bed files as well as
 identified and annotated enhancers. The folder are arranged in order of processing
 with following structure:
@@ -68,10 +72,10 @@ are overlapped and removed (creates enhancer.bed and enhancer.gtf)
 with particular enhancer
 - **08_correlated** - Differentially expressed genes and enhancers are calculated by DESeq2 package based on provided contrasts and correlation is calculated both globally and on contrast level for for each gene-enhancer pair from annotation
 
-### counts
+### output/counts
 Contains counts for genes, enhancers and total aligned reads.
 
-### strand_split_bam
+### output/strand_split_bam
 Contains strand specific BAM files to count the directionality of the enhancer transcription.
 To save space, only the reads that overlap with regions from gtf file containing
 putative enhancers are stored.
