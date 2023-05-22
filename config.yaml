@@ -22,7 +22,7 @@ combine: "merge"
 directionality_cutoff: 90
 max_annotation_distance: 1000000
 gene_read_cutoff: 10
-enhancer_read_cutoff: 10
+enhancer_read_cutoff: 0
 normalize_counts: "none"
 
 ### Differential expression and correlation ------------------------------------

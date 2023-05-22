@@ -9,7 +9,7 @@ threads=$6
 
 # Forward strand.
 # 1. alignments of the second in pair if they map to the forward strand
-# 2. alignments of the first in pair if they map to the reverse  strand
+# 2. alignments of the first in pair if they map to the reverse strand
 samtools view -@ $threads -L $ebed -b -f 128 -F 16 $input > $outdir/fwd1.temp.bam
 samtools index $outdir/fwd1.temp.bam
 

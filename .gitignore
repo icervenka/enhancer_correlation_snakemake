@@ -1,0 +1,11 @@
+
+.snakemake
+.DS_Store
+._*
+input/*
+input/enhancer/*
+input/rnaseq/*
+output/*
+logs/*
+rnaseq_metadata.tsv
+enhancer_metadata.tsv
